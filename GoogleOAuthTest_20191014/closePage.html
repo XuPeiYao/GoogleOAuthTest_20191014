@@ -1,0 +1,17 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>登入成功，請關閉此視窗</title>
+</head>
+<body>
+    <h2>登入成功，本視窗將自動關閉，若未關閉請手動關閉本視窗</h2>
+    <script>
+        window.setTimeout(function () {
+            this.focus();
+            window.opener = this;
+            window.open('', '_self', '');
+            window.close();
+        }, 1000);
+    </script>
+</body>
+</html>
